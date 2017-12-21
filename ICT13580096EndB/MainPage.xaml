@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ICT13580096EndB.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="New"
+            x:Name="newButton" />
+    </ContentPage.ToolbarItems>
+    <ListView
+        x:Name="productListView"
+        RowHeight="250">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem
+                            Text="Edit"
+                            CommandParameter="{Binding .}"
+                            Clicked="Edit_Clicked" />
+                        <MenuItem
+                            Text="Delete"
+                            CommandParameter="{Binding .}"
+                            IsDestructive="true"
+                            Clicked="Delete_Clicked" />
+                    </ViewCell.ContextActions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="100" />
+                            <ColumnDefinition />
+                            <ColumnDefinition
+                                Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            BackgroundColor="Silver"
+                            HeightRequest="100"
+                            Source="https://images-na.ssl-images-amazon.com/.../41m4vuGbstL..." />
+                        <StackLayout
+                            Grid.Column="1">
+                            <Label
+                                Text="{Binding Trycar}"
+                                FontAttributes="Bold"
+                                TextColor="Navy" />
+                            <Label
+                                Text="{Binding Brand}"
+                                LineBreakMode="TailTruncation" />
+                            
+                            <Label
+                                Text="{Binding Years}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Color}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Model}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Tel}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Price, StringFormat='ราคา {0:N0} บาท'}" />
+                            <Label
+                                Text="{Binding Address}"
+                                LineBreakMode="TailTruncation" />
+                        </StackLayout>
+                        <Button
+                            Text="+"
+                            FontSize="30"
+                            Grid.Column="2"
+                            Margin="5"
+                            BackgroundColor="Silver"
+                            VerticalOptions="End"
+                            HeightRequest="50" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

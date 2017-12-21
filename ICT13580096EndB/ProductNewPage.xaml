@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="ICT13580096EndB.ProductNewPage">
+     <Grid>
+        <ScrollView>
+            <Frame
+                Margin="20"
+                CornerRadius="10"
+                BackgroundColor="Green"
+                VerticalOptions="Start">
+                <StackLayout
+                    Orientation="Vertical">
+                    <Label
+                        x:Name="titleLable"
+                        Text="เพิ่มประวัติใหม่"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Bold" />
+                    <Label
+                        Text="ประเภท"
+                        x:Name="tryLabel"
+                        FontSize="12" />
+                    <Picker
+                    x:Name="tryPicker"
+                    Title="เลือประเภท"/>
+                    <Label
+                        Text="ยี่ห้อ"
+                        x:Name="brandLabel"
+                        FontSize="12" />
+                    <Picker
+                    x:Name="brandPicker"
+                    Title="เลือกยี่ห้อ"/>
+                    <Label
+                        Text="รุ่น"
+                        FontSize="12" />
+                    <Entry
+                        x:Name="modelEntry"
+                        Placeholder="รุ่น"
+                        FontSize="12" />
+                    <Label 
+                        x:Name="yearLabel"
+                        Text="ปี"
+                        FontSize="12" />
+                    <Stepper
+                        Maximum="10"
+                        Minimum="0"
+                        Value="0"
+                        Increment="1"
+                        x:Name="yearStepper" />
+
+
+
+
+                     <Label
+                        Text="เลขไมล์"
+                        FontSize="12" />
+                    <Entry
+                        x:Name="mileEntry"
+                        Placeholder="เลขไมล์"
+                        FontSize="12"
+                        Keyboard="Numeric"/>
+                    
+
+
+                    <Label
+                        Text="สี"
+                        x:Name="colorLabel"
+                        FontSize="12" />
+                    <Picker
+                    x:Name="colorPicker"
+                    Title="เลือกสี"/>
+
+
+                     <Label
+                        Text="ดีเลอร์"
+                        FontSize="12" />
+                    <Entry
+                        x:Name="delarEntry"
+                        Placeholder="ดีเลอร์"
+                        FontSize="12" />
+                       
+                 <Switch
+                        IsToggled="true"/>   
+                    <Label
+                        Text="รายละเอียด"
+                        x:Name="detailLable"
+                        FontSize="12" />
+                    <Editor
+                        x:Name="detailEditor"
+                        HeightRequest="75"
+                        BackgroundColor="#B0FFFFFF" />
+                    <Label
+                        Text="ราคา"
+                        FontSize="12" />
+                    <Entry
+                        x:Name="priceEntry"
+                        Placeholder= "ราคา"
+                        FontSize="12" 
+                        Keyboard="Numeric"/>
+                    <Label
+                        Text="จังหวัด"
+                        x:Name="addressLable"
+                        FontSize="12" />
+                    <Picker
+                        x:Name="addressPicker"
+                        Title="เลือกจังหวัด" />
+                    <Label
+                        Text="เบอร์โทร"
+                        FontSize="12" />
+                    <Entry
+                        x:Name="telEntry"
+                        Placeholder="เบอร์โทร"
+                        FontSize="12" 
+                        Keyboard="Telephone"/>
+                    
+
+                    <Button
+                        x:Name="cancelButton"
+                        Text="ยกเลิก"
+                        TextColor="White"
+                        BackgroundColor="Red" />
+                    <Button
+                        x:Name="saveButton"
+                        Text="บันทึก"
+                        TextColor="White"
+                        BackgroundColor="Green"
+                        Grid.Column="1" />
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </Grid>
+</ContentPage>
+
